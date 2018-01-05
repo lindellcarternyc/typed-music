@@ -11,31 +11,6 @@ export enum BaseDurationValue {
   TwoHundredFiftySixthNote = 'twohundred fiftysixth note'
 }
 
-// export const fromString = (input: string): Baseduration => {
-//   if (input === 'dwn') {
-//     return Baseduration.DoubleWholeNote
-//   } else if (input === 'wn') {
-//     return Baseduration.WholeNote
-//   } else if (input === 'qn') {
-//     return Baseduration.QuarterNote
-//   } else if (input === 'en') {
-//     return Baseduration.EighthNote
-//   } else if (input === 'sn') {
-//     return Baseduration.SixteenthNote
-//   } else if (input === 'tsn') {
-//     return Baseduration.ThirtySecondNote
-//   } else if (input === 'sfn') {
-//     return Baseduration.SixtyFourthNote
-//   } else if (input === '128n') {
-//     return Baseduration.OneHundredTwentyEighthNote
-//   } else if (input === '256n') {
-//     return Baseduration.TwoHundredFiftySixthNote
-//   } else {
-//     const msg = `${input} is invalid input`
-//     throw new SyntaxError(msg)
-//   }
-// }
-
 export default class BaseDuration {
   readonly value: BaseDurationValue
 
