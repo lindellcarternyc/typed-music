@@ -1,7 +1,9 @@
 import { MusicSymbolType } from './music-symbol-type'
 
-import Meter from './meter'
-import Note from './note'
+import { Meter, Note } from './models'
+
+// import Meter from './meter'
+// import Note from './note'
 
 type MusicSymbolValue = Meter | Note | 'unrecognized'
 

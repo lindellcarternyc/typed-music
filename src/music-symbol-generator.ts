@@ -4,10 +4,11 @@ import MusicSymbol from './music-symbol'
 import { MusicSymbolType } from './music-symbol-type'
 import { TokenType } from './token-type';
 
-import Meter from './meter'
-import Note from './note'
-import Duration from './duration'
-import Pitch from './pitch'
+import { Meter, Note, Duration, Pitch } from './models'
+// import Meter from './meter'
+// import Note from './note'
+// import Duration from './duration'
+// import Pitch from './pitch'
 
 export default class MusicSymbolGenerator {
   readonly tokens: Token[]
