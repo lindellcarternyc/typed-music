@@ -1,4 +1,3 @@
-// import { Baseduration, fromString as BaseFromString } from './baseduration'
 import BaseDuration from './baseduration'
 
 type Dots = 0 | 1 | 2
