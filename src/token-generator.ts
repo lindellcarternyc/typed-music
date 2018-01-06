@@ -70,6 +70,8 @@ export default class TokenGenerator {
       return this.recognizeMeter()
     } else if (char === '[') {
       return this.recognizeChordStart()
+    } else if (char === ']') {
+      return this.recognizeChordEnd()
     }
     return new Token(TokenType.Unrecognized, {line: this.line, column: this.column}, '')
   }
@@ -196,6 +198,16 @@ export default class TokenGenerator {
     this.position += 1
     this.column += 1
 
+    return token
+  }
+
+  recognizeChordEnd(): Token {
+    const type = TokenType.ChordEnd
+    const position = {line: this.line, column: this.column}
+    this.position += 1
+    this.column += 1
+
+    const token = new Token(type, position, ']')
     return token
   }
 }
