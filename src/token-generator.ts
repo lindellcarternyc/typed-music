@@ -68,6 +68,8 @@ export default class TokenGenerator {
       return this.recognizeBarline()
     } else if (char === 'M') {
       return this.recognizeMeter()
+    } else if (char === '[') {
+      return this.recognizeChordStart()
     }
     return new Token(TokenType.Unrecognized, {line: this.line, column: this.column}, '')
   }
@@ -181,6 +183,20 @@ export default class TokenGenerator {
     this.column += meter.length
 
     return new Token(type, {line, column}, meter)
+  }
+
+  recognizeChordStart(): Token {
+    const type = TokenType.ChordStart
+    const position = {
+      line: this.line,
+      column: this.column
+    }
+    const value = '['
+    const token = new Token(type, position, value)
+    this.position += 1
+    this.column += 1
+
+    return token
   }
 }
 
