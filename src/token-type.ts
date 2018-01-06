@@ -10,5 +10,6 @@ export enum TokenType {
 
   // Punctuation
   Barline = '|',
-  ChordStart = '['
+  ChordStart = '[',
+  ChordEnd = ']'
 }
