@@ -12,6 +12,7 @@ import Midinote from './midinote'
 import Note from './note'
 import Pitch from './pitch'
 import Pitchclass, { PitchclassValue } from './pitchclass'
+import Chord from './chord'
 
 import * as PitchnameModel from './pitchnames'
 
@@ -24,5 +25,6 @@ export {
   Tempo,
   Midinote,
   Note, Pitch, Pitchclass, PitchclassValue,
+  Chord,
   PitchnameModel
 }
